@@ -15,19 +15,22 @@
 
     <style>
       .container {
-        width: 50%;
+        width: 55%;
         margin: auto;
         text-align: center;
         background-color: #393e46;
         border-style: inset;
+        /* height: 610px ; */
       }
 
       .dice {
+        /* flex-direction: row; */
         display: inline-block;
       }
 
       body {
         background-color: #232931;
+        min-height: 260px;
       }
 
       h1 {
@@ -35,7 +38,7 @@
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
         text-shadow: 5px 0 #232931;
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #4ecca3;
       }
 
@@ -47,9 +50,9 @@
       #p2 {
         font-size: 2rem;
         margin-bottom: 2px;
-        /* color: #4ECCA3; */
         color: blueviolet;
         font-family: "Times New Roman", Times, serif;
+        margin-top: 4%;
       }
 
       img {
@@ -177,7 +180,8 @@
         document.getElementById("movesleft").innerHTML =
           "Rolls Left: " + movesleft;
         if (movesleft === 0) {
-          document.getElementById("btn").innerHTML = "Announce The Winner";
+          document.getElementById("movesleft").innerHTML =" ";
+          document.getElementById("btn").innerHTML = "View Winner";
         }
         var rand1 = Math.floor(Math.random() * 6) + 1;
         // console.log(rand1)
