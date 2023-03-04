@@ -92,14 +92,14 @@
         <p id="p1">Player 1</p>
         <p id="score1"></p>
 
-        <img class="img1" src="images/dice1.png" id="img1" />
+        <img class="img1" src="" id="img1" />
       </div>
 
       <div class="dice">
         <p id="p2">Player 2</p>
         <p id="score2"></p>
 
-        <img class="img2" src="images/dice1.png" id="img2" />
+        <img class="img2" src="" id="img2" />
       </div>
 
       <div class="tap">
@@ -134,6 +134,12 @@
     var moves = 1;
     document.getElementById("movesleft").innerHTML =
       "Rolls Left: " + totalmoves;
+    document
+      .querySelector(".img1")
+      .setAttribute("src", "images/dice1.png");
+    document
+      .querySelector(".img2")
+      .setAttribute("src", "images/dice1.png");
 
     function run() {
       if (moves > totalmoves) {
